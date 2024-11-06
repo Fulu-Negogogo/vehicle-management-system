@@ -5,26 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4e6ce5bf-e8f2-4b85-bffd-ce8fdc32e1e8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/git_toolbox_blame.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cars-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cars-service/src/main/java/za/co/protogen/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cars-service/src/main/java/za/co/protogen/core/CarService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cars-service/src/main/java/za/co/protogen/core/impl/CarServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cars-service/src/main/java/za/co/protogen/domain/Car.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cars-service/src/main/java/za/co/protogen/utility/Constant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cars-service/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cars-service/src/main/resources/schema.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reservations-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/users-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +29,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Fulu-Negogogo"
+  }
+}]]></component>
   <component name="GitToolBoxStore">
     <option name="recentBranches">
       <RecentBranches>
@@ -69,6 +56,12 @@
       </RecentBranches>
     </option>
   </component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Fulu-Negogogo/vehicle-management-system.git",
+    "accountId": "405383f1-eaff-49b1-8e10-5bfbe73e54a3"
+  }
+}]]></component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="ProjectErrors" />
   </component>
@@ -157,7 +150,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1730902573561</updated>
-      <workItem from="1730902575964" duration="22300000" />
+      <workItem from="1730902575964" duration="23623000" />
     </task>
     <servers />
   </component>
