@@ -9,14 +9,4 @@ public interface CarService {
     void removeCar(String vin);
     Car getCarById(String vin);
     List<Car> getAllCars();
-    List<Car> getCarsByMake(String make);
-    List<Car> getCarsByYear(int year);
-    List<Car> getCarsByColor(String color);
-    void updateCar(Car car);
-    double calculateAverageMileage();
-    Car findCheapestCar();
-    Car findMostExpensiveCar();
-    Car findNewestCar();
-    Car findOldestCar();
-    List<Car> searchCars(String make, String model, double minPrice, double maxPrice);
 }
