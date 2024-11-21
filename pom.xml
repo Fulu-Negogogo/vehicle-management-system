@@ -4,11 +4,11 @@
 
   <groupId>za.co.protogen</groupId>
   <artifactId>vehicle-management-system</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>1.0.0</version>
   <packaging>pom</packaging>
 
   <name>Vehicle Management System</name>
-  <description>Demo project for Spring Boot</description>
+  <description>Vehicle Management System microservices project</description>
 
   <modules>
     <module>cars-service</module>
@@ -18,10 +18,11 @@
 
   <dependencyManagement>
     <dependencies>
+      <!-- Use the appropriate Spring Boot version -->
       <dependency>
         <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.7.3</version>
+        <artifactId>spring-boot-dependencies</artifactId>
+        <version>3.1.2</version> <!-- Update to match Spring Boot 3.x -->
         <type>pom</type>
         <scope>import</scope>
       </dependency>
@@ -29,25 +30,32 @@
   </dependencyManagement>
 
   <properties>
-    <java.version>11</java.version>
+    <java.version>17</java.version> <!-- Use Java 17 or later for Spring Boot 3.x -->
   </properties>
+
+  <dependencies>
+    <!-- Shared dependencies for all modules -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+  </dependencies>
 
   <build>
     <plugins>
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
-        <version>3.1.2</version> <!-- Specify an appropriate version -->
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.8.1</version>
+        <version>3.3.5</version>
         <configuration>
-          <source>${java.version}</source>
-          <target>${java.version}</target>
+          <mainClass>za.co.protogen.CarsServiceApplication</mainClass>
         </configuration>
       </plugin>
     </plugins>
   </build>
+
 </project>

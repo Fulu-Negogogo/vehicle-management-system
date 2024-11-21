@@ -1,0 +1,352 @@
+Index: pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><project xmlns=\"http://maven.apache.org/POM/4.0.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n         xsi:schemaLocation=\"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd\">\r\n  <modelVersion>4.0.0</modelVersion>\r\n\r\n  <groupId>za.co.protogen</groupId>\r\n  <artifactId>vehicle-management-system</artifactId>\r\n  <version>0.0.1-SNAPSHOT</version>\r\n  <packaging>pom</packaging>\r\n\r\n  <name>Vehicle Management System</name>\r\n  <description>Demo project for Spring Boot</description>\r\n\r\n  <modules>\r\n    <module>cars-service</module>\r\n    <module>users-service</module>\r\n    <module>reservations-service</module>\r\n  </modules>\r\n\r\n  <dependencyManagement>\r\n    <dependencies>\r\n      <dependency>\r\n        <groupId>org.springframework.boot</groupId>\r\n        <artifactId>spring-boot-starter-parent</artifactId>\r\n        <version>2.7.3</version>\r\n        <type>pom</type>\r\n        <scope>import</scope>\r\n      </dependency>\r\n    </dependencies>\r\n  </dependencyManagement>\r\n\r\n  <properties>\r\n    <java.version>11</java.version>\r\n  </properties>\r\n\r\n  <build>\r\n    <plugins>\r\n      <plugin>\r\n        <groupId>org.springframework.boot</groupId>\r\n        <artifactId>spring-boot-maven-plugin</artifactId>\r\n        <version>3.1.2</version> <!-- Specify an appropriate version -->\r\n      </plugin>\r\n      <plugin>\r\n        <groupId>org.apache.maven.plugins</groupId>\r\n        <artifactId>maven-compiler-plugin</artifactId>\r\n        <version>3.8.1</version>\r\n        <configuration>\r\n          <source>${java.version}</source>\r\n          <target>${java.version}</target>\r\n        </configuration>\r\n      </plugin>\r\n    </plugins>\r\n  </build>\r\n</project>\r\n
+===================================================================
+diff --git a/pom.xml b/pom.xml
+--- a/pom.xml	(revision ec252213951c46aff371b4cbe22dfef60674c522)
++++ b/pom.xml	(date 1732119200204)
+@@ -8,7 +8,7 @@
+   <packaging>pom</packaging>
+ 
+   <name>Vehicle Management System</name>
+-  <description>Demo project for Spring Boot</description>
++  <description>Vehicle Management System micro-services project</description>
+ 
+   <modules>
+     <module>cars-service</module>
+@@ -20,8 +20,8 @@
+     <dependencies>
+       <dependency>
+         <groupId>org.springframework.boot</groupId>
+-        <artifactId>spring-boot-starter-parent</artifactId>
+-        <version>2.7.3</version>
++        <artifactId>spring-boot-dependencies</artifactId>
++        <version>3.1.2</version> <!-- Use Spring Boot 3.x -->
+         <type>pom</type>
+         <scope>import</scope>
+       </dependency>
+@@ -29,7 +29,7 @@
+   </dependencyManagement>
+ 
+   <properties>
+-    <java.version>11</java.version>
++    <java.version>17</java.version> <!-- Java 17 for Spring Boot 3.x -->
+   </properties>
+ 
+   <build>
+@@ -37,7 +37,7 @@
+       <plugin>
+         <groupId>org.springframework.boot</groupId>
+         <artifactId>spring-boot-maven-plugin</artifactId>
+-        <version>3.1.2</version> <!-- Specify an appropriate version -->
++        <version>3.1.2</version> <!-- Spring Boot plugin -->
+       </plugin>
+       <plugin>
+         <groupId>org.apache.maven.plugins</groupId>
+@@ -50,4 +50,11 @@
+       </plugin>
+     </plugins>
+   </build>
++
++  <repositories>
++    <repository>
++      <id>spring-repo</id>
++      <url>https://repo.spring.io/release</url>
++    </repository>
++  </repositories>
+ </project>
+Index: cars-service/pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project xmlns=\"http://maven.apache.org/POM/4.0.0\"\r\n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n         xsi:schemaLocation=\"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd\">\r\n\r\n    <modelVersion>4.0.0</modelVersion>\r\n\r\n    <groupId>za.co.protogen</groupId>\r\n    <artifactId>vehicle-management-system</artifactId>\r\n    <version>1.0-SNAPSHOT</version>\r\n    <packaging>jar</packaging>\r\n\r\n    <name>Vehicle Management System</name>\r\n\r\n    <properties>\r\n        <maven.compiler.source>1.8</maven.compiler.source>\r\n        <maven.compiler.target>1.8</maven.compiler.target>\r\n        <maven.junit.version>4.13</maven.junit.version>\r\n    </properties>\r\n\r\n    <repositories>\r\n        <!-- Maven Central repository -->\r\n        <repository>\r\n            <id>central</id>\r\n            <url>https://repo.maven.apache.org/maven2</url>\r\n        </repository>\r\n    </repositories>\r\n\r\n    <dependencies>\r\n        <!-- Other dependencies -->\r\n\r\n        <!-- Plexus Component Annotations from Maven Central -->\r\n        <dependency>\r\n            <groupId>org.codehaus.plexus</groupId>\r\n            <artifactId>plexus-component-annotations</artifactId>\r\n            <version>1.5.4</version>\r\n        </dependency>\r\n\r\n        <!-- JUnit for testing -->\r\n        <dependency>\r\n            <groupId>junit</groupId>\r\n            <artifactId>junit</artifactId>\r\n            <version>${maven.junit.version}</version>\r\n            <scope>test</scope>\r\n        </dependency>\r\n\r\n        <!-- SLF4J and Logback -->\r\n        <dependency>\r\n            <groupId>org.slf4j</groupId>\r\n            <artifactId>slf4j-api</artifactId>\r\n            <version>1.7.32</version>\r\n        </dependency>\r\n        <dependency>\r\n            <groupId>ch.qos.logback</groupId>\r\n            <artifactId>logback-classic</artifactId>\r\n            <version>1.2.6</version>\r\n        </dependency>\r\n\r\n        <!-- Commons Lang3 -->\r\n        <dependency>\r\n            <groupId>org.apache.commons</groupId>\r\n            <artifactId>commons-lang3</artifactId>\r\n            <version>3.12.0</version>\r\n        </dependency>\r\n\r\n        <!-- Maven Compiler Plugin -->\r\n        <dependency>\r\n            <groupId>org.apache.maven.plugins</groupId>\r\n            <artifactId>maven-compiler-plugin</artifactId>\r\n            <version>3.8.1</version>\r\n        </dependency>\r\n\r\n        <!-- Commons Collections4 -->\r\n        <dependency>\r\n            <groupId>org.apache.commons</groupId>\r\n            <artifactId>commons-collections4</artifactId>\r\n            <version>4.4</version>\r\n        </dependency>\r\n    </dependencies>\r\n\r\n    <build>\r\n        <plugins>\r\n            <plugin>\r\n                <groupId>org.apache.maven.plugins</groupId>\r\n                <artifactId>maven-compiler-plugin</artifactId>\r\n                <version>3.8.1</version>\r\n                <configuration>\r\n                    <source>1.8</source>\r\n                    <target>1.8</target>\r\n                </configuration>\r\n            </plugin>\r\n\r\n            <plugin>\r\n                <groupId>org.codehaus.mojo</groupId>\r\n                <artifactId>exec-maven-plugin</artifactId>\r\n                <version>3.0.0</version>\r\n                <configuration>\r\n                    <mainClass>za.co.protogen.Application</mainClass>\r\n                </configuration>\r\n            </plugin>\r\n\r\n            <plugin>\r\n                <groupId>org.apache.maven.plugins</groupId>\r\n                <artifactId>maven-jar-plugin</artifactId>\r\n                <version>3.1.0</version>\r\n                <configuration>\r\n                    <archive>\r\n                        <manifestEntries>\r\n                            <Main-Class>za.co.protogen.Application</Main-Class>\r\n                        </manifestEntries>\r\n                    </archive>\r\n                </configuration>\r\n            </plugin>\r\n        </plugins>\r\n    </build>\r\n\r\n</project>\r\n
+===================================================================
+diff --git a/cars-service/pom.xml b/cars-service/pom.xml
+--- a/cars-service/pom.xml	(revision ec252213951c46aff371b4cbe22dfef60674c522)
++++ b/cars-service/pom.xml	(date 1732119214813)
+@@ -1,117 +1,55 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project xmlns="http://maven.apache.org/POM/4.0.0"
+-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
++<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+-
+     <modelVersion>4.0.0</modelVersion>
+ 
+-    <groupId>za.co.protogen</groupId>
+-    <artifactId>vehicle-management-system</artifactId>
+-    <version>1.0-SNAPSHOT</version>
++    <parent>
++        <groupId>za.co.protogen</groupId>
++        <artifactId>vehicle-management-system</artifactId>
++        <version>0.0.1-SNAPSHOT</version>
++    </parent>
++
++    <artifactId>cars-service</artifactId>
++    <name>Cars Service</name>
++    <description>Service for managing cars in the Vehicle Management System</description>
+     <packaging>jar</packaging>
+ 
+-    <name>Vehicle Management System</name>
+-
+-    <properties>
+-        <maven.compiler.source>1.8</maven.compiler.source>
+-        <maven.compiler.target>1.8</maven.compiler.target>
+-        <maven.junit.version>4.13</maven.junit.version>
+-    </properties>
+-
+-    <repositories>
+-        <!-- Maven Central repository -->
+-        <repository>
+-            <id>central</id>
+-            <url>https://repo.maven.apache.org/maven2</url>
+-        </repository>
+-    </repositories>
+-
+     <dependencies>
+-        <!-- Other dependencies -->
+-
+-        <!-- Plexus Component Annotations from Maven Central -->
++        <!-- Spring Boot dependencies -->
+         <dependency>
+-            <groupId>org.codehaus.plexus</groupId>
+-            <artifactId>plexus-component-annotations</artifactId>
+-            <version>1.5.4</version>
++            <groupId>org.springframework.boot</groupId>
++            <artifactId>spring-boot-starter-web</artifactId>
+         </dependency>
+-
+-        <!-- JUnit for testing -->
+         <dependency>
+-            <groupId>junit</groupId>
+-            <artifactId>junit</artifactId>
+-            <version>${maven.junit.version}</version>
+-            <scope>test</scope>
++            <groupId>org.springframework.boot</groupId>
++            <artifactId>spring-boot-starter-data-jpa</artifactId>
+         </dependency>
+-
+-        <!-- SLF4J and Logback -->
+         <dependency>
+-            <groupId>org.slf4j</groupId>
+-            <artifactId>slf4j-api</artifactId>
+-            <version>1.7.32</version>
++            <groupId>org.springframework.boot</groupId>
++            <artifactId>spring-boot-starter-test</artifactId>
++            <scope>test</scope>
+         </dependency>
++
++        <!-- H2 Database (for in-memory testing) -->
+         <dependency>
+-            <groupId>ch.qos.logback</groupId>
+-            <artifactId>logback-classic</artifactId>
+-            <version>1.2.6</version>
++            <groupId>com.h2database</groupId>
++            <artifactId>h2</artifactId>
++            <scope>runtime</scope>
+         </dependency>
+ 
+-        <!-- Commons Lang3 -->
++        <!-- Additional dependencies -->
+         <dependency>
+             <groupId>org.apache.commons</groupId>
+             <artifactId>commons-lang3</artifactId>
+             <version>3.12.0</version>
+         </dependency>
+-
+-        <!-- Maven Compiler Plugin -->
+-        <dependency>
+-            <groupId>org.apache.maven.plugins</groupId>
+-            <artifactId>maven-compiler-plugin</artifactId>
+-            <version>3.8.1</version>
+-        </dependency>
+-
+-        <!-- Commons Collections4 -->
+-        <dependency>
+-            <groupId>org.apache.commons</groupId>
+-            <artifactId>commons-collections4</artifactId>
+-            <version>4.4</version>
+-        </dependency>
+     </dependencies>
+ 
+     <build>
+         <plugins>
+             <plugin>
+-                <groupId>org.apache.maven.plugins</groupId>
+-                <artifactId>maven-compiler-plugin</artifactId>
+-                <version>3.8.1</version>
+-                <configuration>
+-                    <source>1.8</source>
+-                    <target>1.8</target>
+-                </configuration>
+-            </plugin>
+-
+-            <plugin>
+-                <groupId>org.codehaus.mojo</groupId>
+-                <artifactId>exec-maven-plugin</artifactId>
+-                <version>3.0.0</version>
+-                <configuration>
+-                    <mainClass>za.co.protogen.Application</mainClass>
+-                </configuration>
+-            </plugin>
+-
+-            <plugin>
+-                <groupId>org.apache.maven.plugins</groupId>
+-                <artifactId>maven-jar-plugin</artifactId>
+-                <version>3.1.0</version>
+-                <configuration>
+-                    <archive>
+-                        <manifestEntries>
+-                            <Main-Class>za.co.protogen.Application</Main-Class>
+-                        </manifestEntries>
+-                    </archive>
+-                </configuration>
++                <groupId>org.springframework.boot</groupId>
++                <artifactId>spring-boot-maven-plugin</artifactId>
+             </plugin>
+         </plugins>
+     </build>
+-
+ </project>
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"4e6ce5bf-e8f2-4b85-bffd-ce8fdc32e1e8\" name=\"Changes\" comment=\"\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"ExternalProjectsManager\">\r\n    <system id=\"GRADLE\">\r\n      <state>\r\n        <projects_view />\r\n      </state>\r\n    </system>\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\"><![CDATA[{\r\n  \"lastFilter\": {\r\n    \"state\": \"OPEN\",\r\n    \"assignee\": \"Fulu-Negogogo\"\r\n  }\r\n}]]></component>\r\n  <component name=\"GitToolBoxStore\">\r\n    <option name=\"recentBranches\">\r\n      <RecentBranches>\r\n        <option name=\"branchesForRepo\">\r\n          <list>\r\n            <RecentBranchesForRepo>\r\n              <option name=\"branches\">\r\n                <list>\r\n                  <RecentBranch>\r\n                    <option name=\"branchName\" value=\"task-1a\" />\r\n                    <option name=\"lastUsedInstant\" value=\"1730907534\" />\r\n                  </RecentBranch>\r\n                </list>\r\n              </option>\r\n              <option name=\"repositoryRootUrl\" value=\"file://$PROJECT_DIR$\" />\r\n            </RecentBranchesForRepo>\r\n          </list>\r\n        </option>\r\n      </RecentBranches>\r\n    </option>\r\n  </component>\r\n  <component name=\"GithubPullRequestsUISettings\"><![CDATA[{\r\n  \"selectedUrlAndAccountId\": {\r\n    \"url\": \"https://github.com/Fulu-Negogogo/vehicle-management-system.git\",\r\n    \"accountId\": \"405383f1-eaff-49b1-8e10-5bfbe73e54a3\"\r\n  }\r\n}]]></component>\r\n  <component name=\"ProblemsViewState\">\r\n    <option name=\"selectedTabId\" value=\"ProjectErrors\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\"><![CDATA[{\r\n  \"associatedIndex\": 4\r\n}]]></component>\r\n  <component name=\"ProjectId\" id=\"2oTniSBl0xTthIwgoi3JXcMwge6\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor\": \"Run\",\r\n    \"Maven.vehicle-management-system [clean].executor\": \"Run\",\r\n    \"Maven.vehicle-management-system [compile].executor\": \"Run\",\r\n    \"Maven.vehicle-management-system [deploy].executor\": \"Run\",\r\n    \"Maven.vehicle-management-system [install].executor\": \"Run\",\r\n    \"Maven.vehicle-management-system [package].executor\": \"Run\",\r\n    \"Maven.vehicle-management-system [site].executor\": \"Run\",\r\n    \"Maven.vehicle-management-system [test].executor\": \"Run\",\r\n    \"Maven.vehicle-management-system [validate].executor\": \"Run\",\r\n    \"Maven.vehicle-management-system [verify].executor\": \"Run\",\r\n    \"RequestMappingsPanelOrder0\": \"0\",\r\n    \"RequestMappingsPanelOrder1\": \"1\",\r\n    \"RequestMappingsPanelWidth0\": \"75\",\r\n    \"RequestMappingsPanelWidth1\": \"75\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"Spring Boot.Application (1).executor\": \"Run\",\r\n    \"Spring Boot.Application.executor\": \"Run\",\r\n    \"git-widget-placeholder\": \"task-1a\",\r\n    \"kotlin-language-version-configured\": \"true\",\r\n    \"last_directory_selection\": \"C:/Users/negog/OneDrive/Desktop/protogen/vehicle-management-system/vehicle-management-system/cars-service/src/main/java/za/co/protogen\",\r\n    \"node.js.detected.package.eslint\": \"true\",\r\n    \"node.js.detected.package.tslint\": \"true\",\r\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\r\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\r\n    \"nodejs_package_manager_path\": \"npm\",\r\n    \"settings.editor.selected.configurable\": \"reference.settings.project.maven.repository.indices\",\r\n    \"vue.rearranger.settings.migration\": \"true\"\r\n  },\r\n  \"keyToStringList\": {\r\n    \"DatabaseDriversLRU\": [\r\n      \"h2\"\r\n    ]\r\n  }\r\n}]]></component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CreateClassDialog.RecentsKey\">\r\n      <recent name=\"za.co.protogen.cars.controller\" />\r\n    </key>\r\n    <key name=\"MoveClassesOrPackagesDialog.RECENTS_KEY\">\r\n      <recent name=\"\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"Spring Boot.Application\">\r\n    <configuration name=\"Application (1)\" type=\"SpringBootApplicationConfigurationType\" factoryName=\"Spring Boot\" nameIsGenerated=\"true\">\r\n      <module name=\"cars-service\" />\r\n      <option name=\"SPRING_BOOT_MAIN_CLASS\" value=\"za.co.protogen.Application\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Application\" type=\"SpringBootApplicationConfigurationType\" factoryName=\"Spring Boot\" nameIsGenerated=\"true\">\r\n      <module name=\"cars-service\" />\r\n      <option name=\"SPRING_BOOT_MAIN_CLASS\" value=\"Application\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n  </component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.20224.300\" />\r\n        <option value=\"bundled-js-predefined-d6986cc7102b-410509235cf1-JavaScript-IU-242.20224.300\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"4e6ce5bf-e8f2-4b85-bffd-ce8fdc32e1e8\" name=\"Changes\" comment=\"\" />\r\n      <created>1730902573561</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1730902573561</updated>\r\n      <workItem from=\"1730902575964\" duration=\"23623000\" />\r\n    </task>\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n</project>
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision ec252213951c46aff371b4cbe22dfef60674c522)
++++ b/.idea/workspace.xml	(date 1732124237294)
+@@ -6,6 +6,8 @@
+   <component name="ChangeListManager">
+     <list default="true" id="4e6ce5bf-e8f2-4b85-bffd-ce8fdc32e1e8" name="Changes" comment="">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/cars-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cars-service/pom.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -27,14 +29,19 @@
+     </option>
+   </component>
+   <component name="Git.Settings">
++    <option name="RECENT_BRANCH_BY_REPOSITORY">
++      <map>
++        <entry key="$PROJECT_DIR$" value="main" />
++      </map>
++    </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
+-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+-  "lastFilter": {
+-    "state": "OPEN",
+-    "assignee": "Fulu-Negogogo"
++  <component name="GitHubPullRequestSearchHistory">{
++  &quot;lastFilter&quot;: {
++    &quot;state&quot;: &quot;OPEN&quot;,
++    &quot;assignee&quot;: &quot;Fulu-Negogogo&quot;
+   }
+-}]]></component>
++}</component>
+   <component name="GitToolBoxStore">
+     <option name="recentBranches">
+       <RecentBranches>
+@@ -56,18 +63,18 @@
+       </RecentBranches>
+     </option>
+   </component>
+-  <component name="GithubPullRequestsUISettings"><![CDATA[{
+-  "selectedUrlAndAccountId": {
+-    "url": "https://github.com/Fulu-Negogogo/vehicle-management-system.git",
+-    "accountId": "405383f1-eaff-49b1-8e10-5bfbe73e54a3"
++  <component name="GithubPullRequestsUISettings">{
++  &quot;selectedUrlAndAccountId&quot;: {
++    &quot;url&quot;: &quot;https://github.com/Fulu-Negogogo/vehicle-management-system.git&quot;,
++    &quot;accountId&quot;: &quot;405383f1-eaff-49b1-8e10-5bfbe73e54a3&quot;
+   }
+-}]]></component>
++}</component>
+   <component name="ProblemsViewState">
+     <option name="selectedTabId" value="ProjectErrors" />
+   </component>
+-  <component name="ProjectColorInfo"><![CDATA[{
+-  "associatedIndex": 4
+-}]]></component>
++  <component name="ProjectColorInfo">{
++  &quot;associatedIndex&quot;: 4
++}</component>
+   <component name="ProjectId" id="2oTniSBl0xTthIwgoi3JXcMwge6" />
+   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+   <component name="ProjectViewState">
+@@ -91,9 +98,11 @@
+     "RequestMappingsPanelWidth0": "75",
+     "RequestMappingsPanelWidth1": "75",
+     "RunOnceActivity.ShowReadmeOnStart": "true",
++    "RunOnceActivity.git.unshallow": "true",
+     "Spring Boot.Application (1).executor": "Run",
+     "Spring Boot.Application.executor": "Run",
+     "git-widget-placeholder": "task-1a",
++    "ignore.virus.scanning.warn.message": "true",
+     "kotlin-language-version-configured": "true",
+     "last_directory_selection": "C:/Users/negog/OneDrive/Desktop/protogen/vehicle-management-system/vehicle-management-system/cars-service/src/main/java/za/co/protogen",
+     "node.js.detected.package.eslint": "true",
+@@ -101,6 +110,9 @@
+     "node.js.selected.package.eslint": "(autodetect)",
+     "node.js.selected.package.tslint": "(autodetect)",
+     "nodejs_package_manager_path": "npm",
++    "project.structure.last.edited": "Project",
++    "project.structure.proportion": "0.15",
++    "project.structure.side.proportion": "0.0",
+     "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+     "vue.rearranger.settings.migration": "true"
+   },
+@@ -118,7 +130,20 @@
+       <recent name="" />
+     </key>
+   </component>
+-  <component name="RunManager" selected="Spring Boot.Application">
++  <component name="RunManager" selected="Application.Application">
++    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++      <option name="MAIN_CLASS_NAME" value="za.co.protogen.Application" />
++      <module name="vehicle-management-system (1)" />
++      <extension name="coverage">
++        <pattern>
++          <option name="PATTERN" value="za.co.protogen.*" />
++          <option name="ENABLED" value="true" />
++        </pattern>
++      </extension>
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
+     <configuration name="Application (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+       <module name="cars-service" />
+       <option name="SPRING_BOOT_MAIN_CLASS" value="za.co.protogen.Application" />
+@@ -133,12 +158,17 @@
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
++    <recent_temporary>
++      <list>
++        <item itemvalue="Application.Application" />
++      </list>
++    </recent_temporary>
+   </component>
+   <component name="SharedIndexes">
+     <attachedChunks>
+       <set>
+-        <option value="bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.20224.300" />
+-        <option value="bundled-js-predefined-d6986cc7102b-410509235cf1-JavaScript-IU-242.20224.300" />
++        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.21565.193" />
++        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-IU-243.21565.193" />
+       </set>
+     </attachedChunks>
+   </component>
+@@ -151,6 +181,8 @@
+       <option name="presentableId" value="Default" />
+       <updated>1730902573561</updated>
+       <workItem from="1730902575964" duration="23623000" />
++      <workItem from="1732120701954" duration="765000" />
++      <workItem from="1732123464891" duration="770000" />
+     </task>
+     <servers />
+   </component>
