@@ -6,9 +6,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Constant {
+    // List to hold car objects
     public static List<Car> cars = new ArrayList<>();
 
     static {
+        // Add some sample cars
         Car car1 = new Car();
         car1.setMake("Toyota");
         car1.setModel("Corolla");
