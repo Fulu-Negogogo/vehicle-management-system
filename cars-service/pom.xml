@@ -37,6 +37,9 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>za.co.protogen.CarsServiceApplication</mainClass> <!-- Specify the main class here -->
+                </configuration>
             </plugin>
         </plugins>
     </build>
