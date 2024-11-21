@@ -1,54 +1,52 @@
 package za.co.protogen.core.impl;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import za.co.protogen.core.UserService;
 import za.co.protogen.domain.User;
 import za.co.protogen.utility.Constant;
 
-import java.time.LocalDate;
 import java.util.List;
-import java.util.stream.Collectors;
 
+@Service
 public class UserServiceImpl implements UserService {
 
+    @Autowired
+    private Constant constant;
+
     @Override
-    public void addUser(User user) {
-        Constant.users.add(user);
+    public User addUser(User user) {
+        constant.getUsers().add(user);
+        return user;
     }
 
     @Override
-    public void removeUser(Long userId) {
-        Constant.users.removeIf(user -> user.getId().equals(userId));
+    public void removeUser(Long id) {
+        constant.getUsers().removeIf(user -> user.getId().equals(id));
     }
 
     @Override
-    public User getUserById(Long userId) {
-        return Constant.users.stream()
-                .filter(user -> user.getId().equals(userId))
+    public User getUserById(Long id) {
+        return constant.getUsers().stream()
+                .filter(user -> user.getId().equals(id))
                 .findFirst()
                 .orElse(null);
     }
 
     @Override
     public List<User> getAllUsers() {
-        return Constant.users;
+        return constant.getUsers();
     }
 
     @Override
-    public void updateUser(User updatedUser) {
-        for (int i = 0; i < Constant.users.size(); i++) {
-            if (Constant.users.get(i).getId().equals(updatedUser.getId())) {
-                Constant.users.set(i, updatedUser);
-                break;
-            }
+    public User updateUser(User user) {
+        User existingUser = getUserById(user.getId());
+        if (existingUser != null) {
+            existingUser.setUsername(user.getUsername());
+            existingUser.setEmail(user.getEmail());
+            existingUser.setFirstName(user.getFirstName());
+            existingUser.setLastName(user.getLastName());
         }
-    }
-
-    @Override
-    public List<User> searchUsers(String firstName, String lastName, LocalDate dateOfBirth) {
-        return Constant.users.stream()
-                .filter(user -> (firstName == null || user.getFirstName().equalsIgnoreCase(firstName)) &&
-                        (lastName == null || user.getLastName().equalsIgnoreCase(lastName)) &&
-                        (dateOfBirth == null || user.getDateOfBirth().equals(dateOfBirth)))
-                .collect(Collectors.toList());
+        return existingUser;
     }
 }

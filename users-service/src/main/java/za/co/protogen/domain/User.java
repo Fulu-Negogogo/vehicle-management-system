@@ -1,38 +1,61 @@
 package za.co.protogen.domain;
 
-import java.time.LocalDate;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
+@Entity
+@Table(name = "users")  // Explicitly define the table name as 'users'
 public class User {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    private String username;
+    private String email;
     private String firstName;
     private String lastName;
-    private LocalDate dateOfBirth;
-    private String rsaId;
 
-    // Constructors, getters, and setters
-    public User() {}
-
-    public User(Long id, String firstName, String lastName, LocalDate dateOfBirth, String rsaId) {
-        this.id = id;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.dateOfBirth = dateOfBirth;
-        this.rsaId = rsaId;
+    // Getters and Setters
+    public Long getId() {
+        return id;
     }
 
-    // Getters and setters for each attribute
-    public Long getId() { return id; }
-    public void setId(Long id) { this.id = id; }
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-    public String getFirstName() { return firstName; }
-    public void setFirstName(String firstName) { this.firstName = firstName; }
+    public String getUsername() {
+        return username;
+    }
 
-    public String getLastName() { return lastName; }
-    public void setLastName(String lastName) { this.lastName = lastName; }
+    public void setUsername(String username) {
+        this.username = username;
+    }
 
-    public LocalDate getDateOfBirth() { return dateOfBirth; }
-    public void setDateOfBirth(LocalDate dateOfBirth) { this.dateOfBirth = dateOfBirth; }
+    public String getEmail() {
+        return email;
+    }
 
-    public String getRsaId() { return rsaId; }
-    public void setRsaId(String rsaId) { this.rsaId = rsaId; }
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
 }
