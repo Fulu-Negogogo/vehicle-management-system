@@ -5,19 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4e6ce5bf-e8f2-4b85-bffd-ce8fdc32e1e8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/za/co/protogen/UsersServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/za/co/protogen/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/users-service/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reservations-service/src/main/java/za/co/protogen/reservationsservice/ReservationServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reservations-service/src/main/java/za/co/protogen/reservationsservice/controller/ReservationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reservations-service/src/main/java/za/co/protogen/reservationsservice/domain/Reservation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reservations-service/src/main/java/za/co/protogen/reservationsservice/repository/ReservationRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reservations-service/src/main/java/za/co/protogen/reservationsservice/service/ReservationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reservations-service/src/main/java/za/co/protogen/reservationsservice/service/impl/ReservationServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reservations-service/src/main/java/za/co/protogen/reservationsservice/utility/Constant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reservations-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/protogen/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cars-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cars-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/users-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/za/co/protogen/Application.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/za/co/protogen/core/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/users-service/src/main/java/za/co/protogen/core/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/za/co/protogen/core/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/users-service/src/main/java/za/co/protogen/core/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/za/co/protogen/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/users-service/src/main/java/za/co/protogen/domain/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/za/co/protogen/utility/Constant.java" beforeDir="false" afterPath="$PROJECT_DIR$/users-service/src/main/java/za/co/protogen/utility/Constant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cars-service/src/main/java/za/co/protogen/domain/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/cars-service/src/main/java/za/co/protogen/domain/Car.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reservations-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/reservations-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/cars-service/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/reservations-service/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/users-service/pom.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,8 +117,9 @@
     "Spring Boot.Application (1).executor": "Run",
     "Spring Boot.Application.executor": "Run",
     "Spring Boot.CarsServiceApplication.executor": "Run",
+    "Spring Boot.ReservationServiceApplication.executor": "Run",
     "Spring Boot.UsersServiceApplication.executor": "Run",
-    "git-widget-placeholder": "task-2a",
+    "git-widget-placeholder": "task-3a",
     "kotlin-language-version-configured": "true",
     "last_directory_selection": "C:/Users/negog/OneDrive/Desktop/protogen/vehicle-management-system/vehicle-management-system/cars-service/src/main/java/za/co/protogen",
     "node.js.detected.package.eslint": "true",
@@ -126,6 +130,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.0",
+    "run.configurations.included.in.services": "true",
     "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
     "vue.rearranger.settings.migration": "true"
   },
@@ -146,13 +151,47 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.UsersServiceApplication">
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="KtorApplicationConfigurationType" />
+        <option value="MicronautRunConfigurationType" />
+        <option value="QuarkusRunConfigurationType" />
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.ReservationServiceApplication">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="users-service" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="users-service" />
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
     <configuration name="CarsServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="vehicle-management-system (1)" />
+      <module name="cars-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="za.co.protogen.CarsServiceApplication" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="za.co.protogen.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReservationServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="reservations-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="za.co.protogen.reservationsservice.ReservationServiceApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="za.co.protogen.reservationsservice.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -169,6 +208,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.ReservationServiceApplication" />
         <item itemvalue="Spring Boot.CarsServiceApplication" />
         <item itemvalue="Spring Boot.CarsServiceApplication" />
       </list>

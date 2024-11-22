@@ -158,7 +158,7 @@ public class Car {
         return "Car{" +
                 "vin='" + vin + '\'' +
                 ", make='" + make + '\'' +
-                ", model='" + model + '\'' +
+                ", domain='" + model + '\'' +
                 ", year=" + year +
                 ", color='" + color + '\'' +
                 ", engine='" + engine + '\'' +
