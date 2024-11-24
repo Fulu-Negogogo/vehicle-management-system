@@ -1,7 +1,7 @@
 package za.co.protogen.controller;
 
 import org.springframework.web.bind.annotation.*;
-import za.co.protogen.core.CarService;
+import za.co.protogen.service.CarService;
 import za.co.protogen.domain.Car;
 
 import java.util.List;

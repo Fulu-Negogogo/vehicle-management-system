@@ -9,7 +9,7 @@
     <artifactId>users-service</artifactId>
 
     <dependencies>
-        <!-- Spring Boot starter for core functionality -->
+        <!-- Spring Boot starter for service functionality -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>

@@ -1,4 +1,4 @@
-package za.co.protogen.core;
+package za.co.protogen.service;
 
 import za.co.protogen.domain.Car;
 

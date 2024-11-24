@@ -4,11 +4,12 @@ import org.springframework.stereotype.Component;
 import za.co.protogen.domain.User;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 @Component
 public class Constant {
-    private static List<User> users = new ArrayList<>();
+    private static final List<User> users = new ArrayList<>();
 
     static {
         User user1 = new User();
@@ -30,6 +31,6 @@ public class Constant {
     }
 
     public List<User> getUsers() {
-        return users;
+        return Collections.unmodifiableList(users); // Prevent modification outside this class
     }
 }

@@ -1,9 +1,8 @@
-package za.co.protogen.core.impl;
+package za.co.protogen.service.impl;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import za.co.protogen.core.UserService;
 import za.co.protogen.domain.User;
+import za.co.protogen.service.UserService;
 import za.co.protogen.utility.Constant;
 
 import java.util.List;
@@ -11,8 +10,11 @@ import java.util.List;
 @Service
 public class UserServiceImpl implements UserService {
 
-    @Autowired
-    private Constant constant;
+    private final Constant constant;
+
+    public UserServiceImpl(Constant constant) {
+        this.constant = constant;
+    }
 
     @Override
     public User addUser(User user) {

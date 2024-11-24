@@ -18,8 +18,8 @@ public class ReservationController {
     }
 
     @GetMapping
-    public List<Reservation> getAllReservations() {
-        return reservationService.getAllReservations();
+    public ResponseEntity<List<Reservation>> getAllReservations() {
+        return ResponseEntity.ok(reservationService.getAllReservations());
     }
 
     @GetMapping("/{id}")
@@ -32,27 +32,28 @@ public class ReservationController {
     }
 
     @PostMapping
-    public Reservation createReservation(@RequestBody Reservation reservation) {
-        return reservationService.addReservation(reservation);
+    public ResponseEntity<Reservation> createReservation(@RequestBody Reservation reservation) {
+        Reservation createdReservation = reservationService.addReservation(reservation);
+        return ResponseEntity.status(201).body(createdReservation); // 201 Created
     }
 
     @PutMapping("/{id}")
     public ResponseEntity<Reservation> updateReservation(@PathVariable Long id, @RequestBody Reservation updatedReservation) {
-        Reservation reservation = reservationService.getReservationById(id);
-        if (reservation == null) {
+        Reservation existingReservation = reservationService.getReservationById(id);
+        if (existingReservation == null) {
             return ResponseEntity.notFound().build();
         }
-        updatedReservation.setId(id); // Ensure the ID remains the same
+        updatedReservation.setId(id); // Ensure the ID remains consistent
         return ResponseEntity.ok(reservationService.updateReservation(updatedReservation));
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteReservation(@PathVariable Long id) {
-        Reservation reservation = reservationService.getReservationById(id);
-        if (reservation == null) {
+        Reservation existingReservation = reservationService.getReservationById(id);
+        if (existingReservation == null) {
             return ResponseEntity.notFound().build();
         }
         reservationService.removeReservation(id);
-        return ResponseEntity.noContent().build();
+        return ResponseEntity.noContent().build(); // 204 No Content
     }
 }

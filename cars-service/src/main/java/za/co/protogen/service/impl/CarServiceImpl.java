@@ -1,7 +1,7 @@
-package za.co.protogen.core.impl;
+package za.co.protogen.service.impl;
 
 import org.springframework.stereotype.Service;
-import za.co.protogen.core.CarService;
+import za.co.protogen.service.CarService;
 import za.co.protogen.domain.Car;
 import za.co.protogen.utility.Constant;
 

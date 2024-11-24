@@ -38,9 +38,12 @@ public class ReservationServiceImpl implements ReservationService {
     public Reservation updateReservation(Reservation reservation) {
         Reservation existingReservation = getReservationById(reservation.getId());
         if (existingReservation != null) {
-            existingReservation.setCarModel(reservation.getCarModel());
-            existingReservation.setCustomerName(reservation.getCustomerName());
-            existingReservation.setReservationDate(reservation.getReservationDate());
+            existingReservation.setCarId(reservation.getCarId());
+            existingReservation.setUserId(reservation.getUserId());
+            existingReservation.setFromDate(reservation.getFromDate());
+            existingReservation.setToDate(reservation.getToDate());
+            existingReservation.setPickUpLocation(reservation.getPickUpLocation());
+            existingReservation.setDropOffLocation(reservation.getDropOffLocation());
         }
         return existingReservation;
     }
