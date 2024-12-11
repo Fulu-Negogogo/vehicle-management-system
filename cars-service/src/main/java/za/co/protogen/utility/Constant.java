@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Constant {
+
     // List to hold car objects
     public static List<Car> cars = new ArrayList<>();
 
@@ -22,7 +23,7 @@ public class Constant {
         car1.setMileage(10000);
         car1.setVin("ABC123");
         car1.setPrice(25000);
-        car1.setOwnerId(123);
+        car1.setOwnerId(123L); // Use 'L' to specify Long
         car1.setFeatures(new ArrayList<>());
         cars.add(car1);
 
@@ -37,7 +38,7 @@ public class Constant {
         car2.setMileage(15000);
         car2.setVin("XYZ789");
         car2.setPrice(22000);
-        car2.setOwnerId(456);
+        car2.setOwnerId(456L); // Use 'L' to specify Long
         car2.setFeatures(new ArrayList<>());
         cars.add(car2);
     }

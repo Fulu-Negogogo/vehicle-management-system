@@ -23,6 +23,20 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
+        <!-- Spring Data JPA for persistence -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+
+        <!-- H2 Database (for in-memory or file-based database) -->
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>1.4.200</version>
+            <scope>runtime</scope>
+        </dependency>
+
         <!-- For Testing -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -33,12 +47,11 @@
 
     <build>
         <plugins>
-            <!-- Inherit Spring Boot Maven Plugin from Parent -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>za.co.protogen.CarsServiceApplication</mainClass> <!-- Specify the main class here -->
+                    <mainClass>za.co.protogen.CarsServiceApplication</mainClass>
                 </configuration>
             </plugin>
         </plugins>

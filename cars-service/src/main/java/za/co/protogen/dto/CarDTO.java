@@ -1,16 +1,10 @@
-package za.co.protogen.domain;
+package za.co.protogen.dto;
 
-import jakarta.persistence.*;
 import java.util.List;
 
-@Entity
-@Table(name = "cars")
-public class Car {
+public class CarDTO {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private String make;
     private String model;
     private int year;
@@ -21,13 +15,10 @@ public class Car {
     private int mileage;
     private String vin;
     private double price;
-    private Long ownerId;
+    private long ownerId;
+    private List<CarFeatureDTO> features; // Updated to use CarFeatureDTO
 
-    @OneToMany(mappedBy = "car", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
-    private List<CarFeature> features;
-
-    // Getters and Setters...
-
+    // Getters and setters
     public Long getId() {
         return id;
     }
@@ -116,19 +107,19 @@ public class Car {
         this.price = price;
     }
 
-    public Long getOwnerId() {
+    public long getOwnerId() {
         return ownerId;
     }
 
-    public void setOwnerId(Long ownerId) {
+    public void setOwnerId(long ownerId) {
         this.ownerId = ownerId;
     }
 
-    public List<CarFeature> getFeatures() {
+    public List<CarFeatureDTO> getFeatures() {
         return features;
     }
 
-    public void setFeatures(List<CarFeature> features) {
+    public void setFeatures(List<CarFeatureDTO> features) {
         this.features = features;
     }
 }

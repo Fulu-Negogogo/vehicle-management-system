@@ -5,21 +5,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4e6ce5bf-e8f2-4b85-bffd-ce8fdc32e1e8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/cars-service/src/main/java/za/co/protogen/adapter/Mappers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cars-service/src/main/java/za/co/protogen/config/ApplicationProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cars-service/src/main/java/za/co/protogen/domain/CarFeature.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cars-service/src/main/java/za/co/protogen/dto/CarDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cars-service/src/main/java/za/co/protogen/dto/CarFeatureDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cars-service/src/main/java/za/co/protogen/repository/CarFeatureRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cars-service/src/main/java/za/co/protogen/repository/CarRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reservations-service/src/main/java/za/co/protogen/reservationsservice/adapter/Mappers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reservations-service/src/main/java/za/co/protogen/reservationsservice/config/ApplicationProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reservations-service/src/main/java/za/co/protogen/reservationsservice/dto/ReservationDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/za/co/protogen/adapter/Mappers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/za/co/protogen/config/ApplicationProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/87bfdc03-0ee0-4279-816b-2273b0b8fea2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/87bfdc03-0ee0-4279-816b-2273b0b8fea2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/87bfdc03-0ee0-4279-816b-2273b0b8fea2/storage_v2/_src_/database/TESTDB.kGhKkw/schema/PUBLIC.aaZQjQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/87bfdc03-0ee0-4279-816b-2273b0b8fea2/storage_v2/_src_/database/TESTDB.kGhKkw/schema/PUBLIC.aaZQjQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024_11_20_19_55_[Changes]1/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024_11_20_19_55__Changes_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024_11_20_19_56_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024_11_20_19_56__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024_11_21_15_32_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024_11_21_15_32__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_2024_11_21_15_38_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_2024_11_21_15_38__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cars-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cars-service/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cars-service/src/main/java/za/co/protogen/controller/CarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cars-service/src/main/java/za/co/protogen/controller/CarController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cars-service/src/main/java/za/co/protogen/core/CarService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cars-service/src/main/java/za/co/protogen/service/CarService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cars-service/src/main/java/za/co/protogen/core/impl/CarServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/cars-service/src/main/java/za/co/protogen/service/impl/CarServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cars-service/src/main/java/za/co/protogen/domain/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/cars-service/src/main/java/za/co/protogen/domain/Car.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cars-service/src/main/java/za/co/protogen/service/CarService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cars-service/src/main/java/za/co/protogen/service/CarService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cars-service/src/main/java/za/co/protogen/service/impl/CarServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/cars-service/src/main/java/za/co/protogen/service/impl/CarServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cars-service/src/main/java/za/co/protogen/utility/Constant.java" beforeDir="false" afterPath="$PROJECT_DIR$/cars-service/src/main/java/za/co/protogen/utility/Constant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cars-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/cars-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reservations-service/src/main/java/za/co/protogen/reservationsservice/controller/ReservationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/reservations-service/src/main/java/za/co/protogen/reservationsservice/controller/ReservationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reservations-service/src/main/java/za/co/protogen/reservationsservice/domain/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/reservations-service/src/main/java/za/co/protogen/reservationsservice/domain/Reservation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reservations-service/src/main/java/za/co/protogen/reservationsservice/service/ReservationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/reservations-service/src/main/java/za/co/protogen/reservationsservice/service/ReservationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reservations-service/src/main/java/za/co/protogen/reservationsservice/service/impl/ReservationServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reservations-service/src/main/java/za/co/protogen/reservationsservice/utility/Constant.java" beforeDir="false" afterPath="$PROJECT_DIR$/reservations-service/src/main/java/za/co/protogen/reservationsservice/utility/Constant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reservations-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/reservations-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/users-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/za/co/protogen/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/users-service/src/main/java/za/co/protogen/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/za/co/protogen/core/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/users-service/src/main/java/za/co/protogen/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/za/co/protogen/core/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/users-service/src/main/java/za/co/protogen/service/impl/UserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users-service/src/main/java/za/co/protogen/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/users-service/src/main/java/za/co/protogen/domain/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users-service/src/main/java/za/co/protogen/utility/Constant.java" beforeDir="false" afterPath="$PROJECT_DIR$/users-service/src/main/java/za/co/protogen/utility/Constant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/users-service/src/main/resources/application.properties" afterDir="false" />
@@ -40,6 +56,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -88,7 +105,7 @@
     <option name="isToolWindowVisible" value="false" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
@@ -99,51 +116,51 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
-    "Maven.vehicle-management-system [clean].executor": "Run",
-    "Maven.vehicle-management-system [compile].executor": "Run",
-    "Maven.vehicle-management-system [deploy].executor": "Run",
-    "Maven.vehicle-management-system [install].executor": "Run",
-    "Maven.vehicle-management-system [package].executor": "Run",
-    "Maven.vehicle-management-system [site].executor": "Run",
-    "Maven.vehicle-management-system [test].executor": "Run",
-    "Maven.vehicle-management-system [validate].executor": "Run",
-    "Maven.vehicle-management-system [verify].executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "Spring Boot.Application (1).executor": "Run",
-    "Spring Boot.Application.executor": "Run",
-    "Spring Boot.CarsServiceApplication.executor": "Run",
-    "Spring Boot.ReservationServiceApplication.executor": "Run",
-    "Spring Boot.UsersServiceApplication.executor": "Run",
-    "git-widget-placeholder": "task-4a",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_directory_selection": "C:/Users/negog/OneDrive/Desktop/protogen/vehicle-management-system/vehicle-management-system/cars-service/src/main/java/za/co/protogen",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.0",
-    "run.configurations.included.in.services": "true",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.vehicle-management-system [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.vehicle-management-system [compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.vehicle-management-system [deploy].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.vehicle-management-system [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.vehicle-management-system [package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.vehicle-management-system [site].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.vehicle-management-system [test].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.vehicle-management-system [validate].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.vehicle-management-system [verify].executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;Spring Boot.Application (1).executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.Application.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.CarsServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ReservationServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.UsersServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;task-4a&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Users/negog/OneDrive/Desktop/protogen/vehicle-management-system/vehicle-management-system/cars-service/src/main/java/za/co/protogen&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "h2"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;h2&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="za.co.protogen.cars.controller" />
@@ -165,7 +182,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ReservationServiceApplication">
+  <component name="RunManager" selected="Spring Boot.CarsServiceApplication">
     <configuration name="CarsServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="cars-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="za.co.protogen.CarsServiceApplication" />
@@ -201,8 +218,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.ReservationServiceApplication" />
         <item itemvalue="Spring Boot.CarsServiceApplication" />
+        <item itemvalue="Spring Boot.ReservationServiceApplication" />
         <item itemvalue="Spring Boot.CarsServiceApplication" />
       </list>
     </recent_temporary>
@@ -225,10 +242,16 @@
       <updated>1730902573561</updated>
       <workItem from="1730902575964" duration="23623000" />
       <workItem from="1732441285256" duration="4872000" />
+      <workItem from="1733920940668" duration="793000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/vehicle_management_system$CarsServiceApplication.ic" NAME="CarsServiceApplication Coverage Results" MODIFIED="1733912014006" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>za.co.protogen.*</FILTER>
+    </SUITE>
   </component>
 </project>
